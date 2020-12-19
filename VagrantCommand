@@ -1,0 +1,4 @@
+vagrant box add centos/8
+mkdir lab
+cd lab
+vagrant init centos/8
