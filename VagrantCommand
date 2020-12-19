@@ -1,4 +1,18 @@
+# download the vagrant box
 vagrant box add centos/8
+vagrant box add ubuntu/bionic64
+
+# create vagrant configure file
+
 mkdir lab
 cd lab
 vagrant init centos/8
+
+# edit the vagrant config file
+
+# vagrant config requires turning on the exp mode for these features: disk
+VAGRANT_EXPERIMENTAL="disks"
+on windows: set VAGRANT_EXPERIMENTAL="disks"
+
+# create the VM based on the vagrant config file
+vagrant up
